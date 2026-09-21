@@ -40,7 +40,7 @@ mc-button {
 mc-button::part(button) {
   border-color: transparent;
   min-height: var(--control-tower-control-height);
-  padding: 4px 8px;
+  padding: 6px 12px !important;
   font-size: var(--control-tower-text-small-size);
   line-height: var(--control-tower-text-small-line-height);
 }
@@ -200,6 +200,15 @@ td {
 .drawer table td {
   height: 24px;
   padding: 4px;
+}
+
+.shipment-drawer .milestone-block th,
+.shipment-drawer .milestone-block td {
+  padding: 6px 12px;
+}
+
+.drawer mc-button::part(button) {
+  padding: 6px 12px !important;
 }
 
 .fields {

@@ -10,6 +10,7 @@ import menuIcon from './Icons/bars-horizontal.svg';
 import bellIcon from './Icons/bell.svg';
 import closeIcon from './Icons/cloes.svg';
 import expandIcon from './Icons/expand.svg';
+import configurationIcon from './Icons/Icon-1.svg';
 import funnelIcon from './Icons/funnel.svg';
 import infoIcon from './Icons/info.svg';
 import shrinkIcon from './Icons/shrink.svg';
@@ -100,7 +101,8 @@ function RiskBadge({ label }) {
 }
 
 function StatusBadge({ label, disabled = false }) {
-  return <McTag className={label === 'Not Applicable' ? 'not-applicable-tag' : ''} fit="small" label={label} appearance={statusAppearance[label] || 'neutral-weak'} disabled={disabled} />;
+  const appearance = label === 'Not Applicable' ? 'neutral-weak' : statusAppearance[label] || 'neutral-weak';
+  return <McTag className={label === 'Not Applicable' ? 'not-applicable-tag' : ''} fit="small" label={label} appearance={appearance} disabled={disabled} />;
 }
 
 function ShipmentDrawer({ shipment, onClose }) {
@@ -167,7 +169,7 @@ function ShipmentDrawer({ shipment, onClose }) {
                 <td>{code}</td>
                 <td>{actual}</td>
                 <td>{due}</td>
-                <td><StatusBadge label={status} disabled={status === 'Not Applicable'} /></td>
+                <td><StatusBadge label={status} /></td>
               </tr>
             ))}
           </tbody>
@@ -195,7 +197,7 @@ function ShipmentDrawer({ shipment, onClose }) {
                 <td>{code}</td>
                 <td>{actual}</td>
                 <td>{due}</td>
-                <td><StatusBadge label={status} disabled={status === 'Not Applicable'} /></td>
+                <td><StatusBadge label={status} /></td>
               </tr>
             ))}
           </tbody>
@@ -292,7 +294,7 @@ export default function App() {
             </div>
 
             <McButton fit="small" appearance="neutral" variant="outlined">
-              <img src={expandIcon} alt="" />
+              <img src={configurationIcon} alt="" />
               Configuration Center
             </McButton>
           </div>
@@ -491,16 +493,19 @@ export default function App() {
                 <div className="pagination-left">
                   <div className="items-per-page">
                     <span>Items per page:</span>
-                    <select defaultValue="10">
-                      <option value="10">10</option>
-                      <option value="20">20</option>
-                    </select>
+                    <div className="items-per-page-select">
+                      <select defaultValue="10">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                      </select>
+                      <img src={trailingDownIcon} alt="" />
+                    </div>
                   </div>
                   <div className="pagination-info">1–10 of 500 items</div>
                 </div>
                 <div className="page-nav">
                   <button type="button" aria-label="Previous page"><img src={previousIcon} alt="Previous" /></button>
-                  <button type="button">1</button>
+                  <button type="button" className="active">1</button>
                   <button type="button">2</button>
                   <button type="button">3</button>
                   <button type="button">4</button>
