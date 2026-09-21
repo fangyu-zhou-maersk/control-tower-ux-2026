@@ -1,0 +1,250 @@
+/* Dense MDS layout proportions from the reference composition. */
+:root {
+  --control-tower-page-gutter: 24px;
+  --control-tower-control-height: 24px;
+  --control-tower-text-small-size: var(--mds_brand_typography_text_small_desktop_font-size);
+  --control-tower-text-small-line-height: var(--mds_brand_typography_text_small_desktop_line-height);
+  --control-tower-text-medium-size: var(--mds_brand_typography_text_medium_desktop_font-size);
+  --control-tower-text-medium-line-height: var(--mds_brand_typography_text_medium_desktop_line-height);
+  --control-tower-text-large-size: var(--mds_brand_typography_text_large_desktop_font-size);
+  --control-tower-text-large-line-height: var(--mds_brand_typography_text_large_desktop_line-height);
+}
+
+header {
+  font-family: var(--mds_brand_typography_text_font-family);
+  font-size: var(--control-tower-text-medium-size);
+  line-height: var(--control-tower-text-medium-line-height);
+}
+
+header b {
+  font-size: var(--control-tower-text-large-size);
+  line-height: var(--control-tower-text-large-line-height);
+  font-weight: var(--mds_brand_typography_text_large_semibold_font-weight);
+}
+
+.context,
+nav {
+  font-family: var(--mds_brand_typography_text_font-family);
+  font-size: var(--control-tower-text-small-size);
+  line-height: var(--control-tower-text-small-line-height);
+}
+
+nav b {
+  font-weight: var(--mds_brand_typography_text_small_semibold_font-weight);
+}
+
+mc-button {
+  --mds_button_min-width: auto;
+}
+
+mc-button::part(button) {
+  border-color: transparent;
+  min-height: var(--control-tower-control-height);
+  padding: 4px 8px;
+  font-size: var(--control-tower-text-small-size);
+  line-height: var(--control-tower-text-small-line-height);
+}
+
+mc-button[appearance='secondary']::part(button) {
+  background-color: var(--mds_brand_appearance_neutral_weak_background-color);
+  color: var(--mds_brand_appearance_neutral_default_text-color);
+  border-color: var(--mds_brand_appearance_neutral_weak_border-color);
+}
+
+mc-checkbox {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+mc-checkbox::part(label-container) {
+  gap: 4px;
+}
+
+mc-checkbox::part(label) {
+  font-size: var(--control-tower-text-small-size);
+  line-height: var(--control-tower-text-small-line-height);
+}
+
+mc-checkbox::part(checkmark) {
+  width: 16px;
+  height: 16px;
+}
+
+mc-tag::part(tag) {
+  font-family: var(--mds_brand_typography_text_font-family);
+  font-size: var(--control-tower-text-small-size) !important;
+  line-height: var(--control-tower-text-small-line-height) !important;
+  font-weight: var(--mds_brand_typography_text_small_normal_font-weight) !important;
+  min-height: 20px !important;
+  padding: 0 8px !important;
+  white-space: nowrap;
+}
+
+main {
+  width: min(100%, 1180px);
+  padding: 24px var(--control-tower-page-gutter) 16px;
+}
+
+h1 {
+  font-size: var(--mds_brand_typography_headline_small_desktop_font-size);
+  line-height: var(--mds_brand_typography_headline_small_desktop_line-height);
+}
+
+h1 + p,
+.controls,
+footer {
+  font-family: var(--mds_brand_typography_text_font-family);
+  font-size: var(--control-tower-text-small-size);
+  line-height: var(--control-tower-text-small-line-height);
+}
+
+h1 + p {
+  margin: 4px 0 16px;
+}
+
+.controls {
+  gap: 12px;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+.controls input {
+  height: var(--control-tower-control-height);
+}
+
+.metrics {
+  gap: 8px;
+}
+
+.card {
+  min-height: 76px;
+  padding: 8px;
+}
+
+.card span {
+  font-family: var(--mds_brand_typography_text_font-family);
+  font-size: var(--control-tower-text-small-size);
+  line-height: var(--control-tower-text-small-line-height);
+  font-weight: var(--mds_brand_typography_text_small_semibold_font-weight);
+}
+
+.card strong {
+  margin: 4px 0;
+  font-size: var(--control-tower-text-large-size);
+  line-height: var(--control-tower-text-large-line-height);
+}
+
+.card small {
+  font-family: var(--mds_brand_typography_text_font-family);
+  font-size: var(--control-tower-text-small-size);
+  line-height: var(--control-tower-text-small-line-height);
+}
+
+.queue {
+  margin-top: 24px;
+  overflow-x: auto;
+}
+
+.queue h2 {
+  margin-bottom: 8px;
+  font-family: var(--mds_brand_typography_text_font-family);
+  font-size: var(--control-tower-text-medium-size);
+  line-height: var(--control-tower-text-medium-line-height);
+  font-weight: var(--mds_brand_typography_text_medium_semibold_font-weight);
+}
+
+.toolbar {
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.search {
+  width: 240px;
+}
+
+.search mc-input {
+  --mds_input_min-width: 240px;
+}
+
+table {
+  min-width: 960px;
+}
+
+th {
+  padding: 8px 6px;
+  font-family: var(--mds_brand_typography_text_font-family);
+  font-size: var(--control-tower-text-small-size);
+  line-height: var(--control-tower-text-small-line-height);
+  font-weight: var(--mds_brand_typography_text_small_semibold_font-weight);
+}
+
+td {
+  height: 28px;
+  padding: 4px 6px;
+  font-family: var(--mds_brand_typography_text_font-family);
+  font-size: var(--control-tower-text-small-size);
+  line-height: var(--control-tower-text-small-line-height);
+  font-weight: var(--mds_brand_typography_text_small_normal_font-weight);
+}
+
+.details {
+  gap: 12px 8px;
+  padding: 8px 0 12px;
+}
+
+.drawer h3 {
+  margin: 12px 0 4px;
+}
+
+.drawer table th,
+.drawer table td {
+  height: 24px;
+  padding: 4px;
+}
+
+.fields {
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.fields input {
+  margin-top: 4px;
+}
+
+@media (max-width: 1100px) {
+  main {
+    padding: 20px 16px 12px;
+  }
+
+  .controls {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .controls .threshold {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .toolbar {
+    flex-wrap: wrap;
+  }
+
+  .toolbar .toolbar-spacer {
+    display: none;
+  }
+
+  .search {
+    order: 5;
+    width: 100%;
+  }
+
+  .search mc-input {
+    --mds_input_min-width: 100%;
+  }
+}
