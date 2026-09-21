@@ -81,8 +81,8 @@ mc-tag::part(tag) {
 }
 
 main {
-  width: min(100%, 1180px);
-  padding: 24px var(--control-tower-page-gutter) 16px;
+  width: min(100%, 1440px);
+  padding: 22px 30px 24px;
 }
 
 h1 {
