@@ -2,11 +2,11 @@
 
 ## Context
 
-The prototype needed to be aligned closely with a supplied control-tower reference while following the repository's MDS and visual-fidelity rules.
+The prototype needed to be aligned closely with a supplied Control Tower reference while following the repository's MDS and visual-fidelity rules.
 
 ## Prompt
 
-Rebuild and refine the Control Tower UI against the supplied reference image. Follow the added design-system and visual-fidelity requirements, use the project's MDS components and source icons, and keep iterating on layout, content, typography, spacing, table semantics, drawers, filters, and responsive behavior based on visual review.
+Rebuild and refine the UI of the current project repository against the supplied reference image. Follow the added design-system and visual-fidelity requirements, use the project's MDS components and source icons in `src/icons`, and keep iterating on layout, content, typography, spacing, table semantics, drawers, filters, and responsive behavior based on visual review.
 
 ## Result
 

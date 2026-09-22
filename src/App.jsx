@@ -300,7 +300,10 @@ export default function App() {
           </div>
 
           <nav className="tabs" aria-label="Sections">
-            <button type="button" className="active">Air Exceptions</button>
+            <span className="tab-tooltip-wrap">
+              <button type="button" className="active">Air Exceptions</button>
+              <span className="tab-tooltip">Shipments with missing or corrected system updates — milestone exceptions, Air freight forwarding</span>
+            </span>
             <button type="button">Air Timeliness</button>
             <button type="button">Sea Exceptions</button>
             <button type="button">Document Exceptions</button>
@@ -308,11 +311,6 @@ export default function App() {
           </nav>
 
           <main className="content-area">
-            <div className="section-head">
-              <h2>Air Exceptions</h2>
-              <p>Shipments with missing or corrected system updates — milestone exceptions, Air freight forwarding</p>
-            </div>
-
             <div className="control-strip">
               <div className="threshold-box">
                 <span>Set “Soon Due” Threshold Within</span>

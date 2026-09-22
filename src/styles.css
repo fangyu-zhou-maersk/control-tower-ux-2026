@@ -134,7 +134,7 @@ img {
 
 .header-row {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 20px;
   padding: 12px 24px 0;
@@ -152,9 +152,9 @@ img {
   padding-right: 20px;
   border-right: 1px solid var(--line);
   font-family: var(--mds_brand_typography_headline_font-family, Arial, sans-serif);
-  font-size: var(--mds_brand_typography_headline_medium_desktop_font-size, 40px);
-  line-height: var(--mds_brand_typography_headline_medium_desktop_line-height, 40px);
-  font-weight: 300;
+  font-size: var(--mds_brand_typography_headline_small_desktop_font-size, 26px);
+  line-height: var(--mds_brand_typography_headline_small_desktop_line-height, 32px);
+  font-weight: var(--mds_brand_typography_headline_small_font-weight, 400);
 }
 
 .meta-row {
@@ -233,10 +233,49 @@ img {
   border-bottom-color: var(--primary);
 }
 
+.tab-tooltip-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.tab-tooltip {
+  position: absolute;
+  left: 12px;
+  bottom: calc(100% + 8px);
+  z-index: 40;
+  display: none;
+  width: 240px;
+  padding: 8px 10px;
+  transform: none;
+  border-radius: 6px;
+  background: var(--mds_brand_appearance_neutral_default_background-color, #fff);
+  color: var(--mds_brand_appearance_neutral_default_text-color, var(--text));
+  font-size: 12px;
+  line-height: 16px;
+  white-space: normal;
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+.tab-tooltip-wrap:hover .tab-tooltip,
+.tab-tooltip-wrap:focus-within .tab-tooltip {
+  display: block;
+}
+
+.tab-tooltip::after {
+  position: absolute;
+  left: 16px;
+  bottom: -5px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  background: var(--mds_brand_appearance_neutral_default_background-color, #fff);
+  content: '';
+}
+
 .content-area {
   width: 100%;
   max-width: none;
-  padding: 18px 24px 24px;
+  padding: 20px 24px 24px;
 }
 
 .section-head {
@@ -263,7 +302,7 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  margin: 18px 0 16px;
+  margin: 0 0 16px;
   padding-bottom: 0;
 }
 
@@ -310,15 +349,16 @@ img {
   z-index: 40;
   display: none;
   width: max-content;
-  max-width: 220px;
+  width: 240px;
+  max-width: 240px;
   padding: 8px 10px;
   transform: translateX(-50%);
-  border-radius: 2px;
+  border-radius: 6px;
   background: var(--mds_brand_appearance_neutral_default_background-color, #fff);
   color: var(--mds_brand_appearance_neutral_default_text-color, var(--text));
   font-size: 12px;
   line-height: 16px;
-  white-space: nowrap;
+  white-space: normal;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.22);
 }
 
