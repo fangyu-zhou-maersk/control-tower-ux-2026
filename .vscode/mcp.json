@@ -1,0 +1,13 @@
+{
+  "servers": {
+    "mds": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "${workspaceFolder}/node_modules/@maersk-global/mds-mcp-server/index.js",
+        "--base-path",
+        "${workspaceFolder}/node_modules"
+      ]
+    }
+  }
+}
