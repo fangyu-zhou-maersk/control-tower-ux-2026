@@ -7,3 +7,9 @@ MdsConfig.iconsDynamicImportPath = import.meta.env.DEV ? '/node_modules/' : '/as
 
 import '@maersk-global/mds-components-core'
 import '@maersk-global/mds-components-community'
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import './app.css'
+import App from './App.jsx'
+
+createRoot(document.getElementById('root')).render(<App />)
